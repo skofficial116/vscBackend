@@ -60,19 +60,68 @@ const registerUser = asyncHandler(async (req, res) => {
     .json(new ApiResponse(201, createdUser, "User Registered Successfully!"));
 });
 
+// const loginUser = asyncHandler(async (req, res) => {
+//   //ask email/username and pasword
+//   const { username, email, password } = req.body;
+//   if (!username || !email) {
+//     throw new ApiError(400, "email/username is required!");
+//   }
+
+//   const user = await User.findOne({
+//     $or: [{ username }, { email }],
+//   });
+
+//   if (!user) {
+//     throw new ApiError(404, " username/email does not exist. Kindly register.");
+//   }
+
+//   const passwordCheck = await user.isPasswordCorrect(password);
+
+//   if (!passwordCheck) {
+//     throw new ApiError(404, "Invalid User Credentials");
+//   }
+
+//   const { accessToken, refreshToken } = await generateAccessAndRefreshToken(
+//     user._id
+//   );
+
+//   const loggedUser = await User.findById(user._id).select(
+//     "-password -refreshToken"
+//   );
+
+//   const options = {
+//     htttpOnly: true,
+//     secure: true,
+//   };
+
+//   return res
+//     .status(200)
+//     .cookie("accessToken", accessToken, options)
+//     .cookie("refreshToken", refreshToken, options)
+//     .json(
+//       new ApiResponse(
+//         200,
+//         {
+//           user: loggedUser,
+//           accessToken,
+//           refreshToken,
+//         },
+//         "User logged in Successfully"
+//       )
+//     );
+// });
+
 const loginUser = asyncHandler(async (req, res) => {
-  //ask email/username and pasword
-  const { username, email, password } = req.body;
-  if (!username || !email) {
-    throw new ApiError(400, "email/username is required!");
+  
+  const { username, password } = req.body;
+  if (!username ) {
+    throw new ApiError(400, "username is required!");
   }
 
-  const user = await User.findOne({
-    $or: [{ username }, { email }],
-  });
+  const user = await User.findOne({ username });
 
   if (!user) {
-    throw new ApiError(404, " username/email does not exist. Kindly register.");
+    throw new ApiError(404, " username does not exist. Kindly register.");
   }
 
   const passwordCheck = await user.isPasswordCorrect(password);
@@ -81,35 +130,49 @@ const loginUser = asyncHandler(async (req, res) => {
     throw new ApiError(404, "Invalid User Credentials");
   }
 
-  const { accessToken, refreshToken } = await generateAccessAndRefreshToken(
-    user._id
-  );
+  // const { accessToken, refreshToken } = await generateAccessAndRefreshToken(
+  //   user._id
+  // );
 
   const loggedUser = await User.findById(user._id).select(
-    "-password -refreshToken"
+    "-password"
   );
 
-  const options = {
-    htttpOnly: true,
-    secure: true,
-  };
-
+  // const options = {
+  //   htttpOnly: true,
+  //   secure: true,
+  // };
+  
   return res
-    .status(200)
-    .cookie("accessToken", accessToken, options)
-    .cookie("refreshToken", refreshToken, options)
-    .json(
-      new ApiResponse(
-        200,
-        {
-          user: loggedUser,
-          accessToken,
-          refreshToken,
-        },
-        "User logged in Successfully"
-      )
-    );
+  .status(200)
+  .json(
+    new ApiResponse(
+      200,
+      {
+        user: loggedUser,
+      },
+      "User logged in Successfully"
+    )
+  );
+
+
+  // return res
+  //   .status(200)
+  //   .cookie("accessToken", accessToken, options)
+  //   .cookie("refreshToken", refreshToken, options)
+  //   .json(
+  //     new ApiResponse(
+  //       200,
+  //       {
+  //         user: loggedUser,
+  //         accessToken,
+  //         refreshToken,
+  //       },
+  //       "User logged in Successfully"
+  //     )
+  //   );
 });
+
 
 const logoutUser = asyncHandler(async (res, req) => {
   await User.findByIdAndUpdate(
