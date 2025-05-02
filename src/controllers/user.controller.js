@@ -22,20 +22,22 @@ const generateAccessAndRefreshToken = async (userId) => {
   }
 };
 
+
 const registerUser = asyncHandler(async (req, res) => {
-  const { username, password, fullName } = req.body;
+  const {  username, password, fullName } = req.body;
 
   // Validation for required fields
+  // if (!email) throw new ApiError(400, "Email is required!");
   if (!username) throw new ApiError(400, "Username is required!");
   if (!password) throw new ApiError(400, "Password is required!");
   if (!fullName) throw new ApiError(400, "Full Name is required!");
 
   // Check for existing user
-  const existingUser = await User.findOne({ $or: [ { username }] });
+  const existingUser = await User.findOne({ username });
   if (existingUser) {
     throw new ApiError(
       409,
-      "User with the given username/email already exists!"
+      "User with the given username already exists!"
     );
   }
 
@@ -43,6 +45,8 @@ const registerUser = asyncHandler(async (req, res) => {
   const user = await User.create({
     username: username.toLowerCase(),
     fullName,
+    // avatar: avatar.url,
+    // coverImage: cover?.url || "",
     password,
   });
 
