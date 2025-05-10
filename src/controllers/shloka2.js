@@ -2,8 +2,10 @@ const library ={
     bg:{
         
         "1": {
-          "title": "",
-          "description/metadata of the chapter": null,
+          "titleEnglish": "Observing the Armies on the Battlefield of Kurukṣetra",
+          "titleHindi":"कुरुक्षेत्र के युद्धस्थल में सैन्यनिरीक्षण",
+
+          "description": "",
           "verses": {
             "1": {
               "english": {
@@ -1168,8 +1170,9 @@ const library ={
           }
         },
         "2": {
-          "title": "",
-          "description/metadata of the chapter": null,
+          "titleEnglish": "Contents of the Gītā Summarized",
+          "titleHindi":"गीता का सार",
+          "description": null,
           "verses": {
             "1": {
               "english": {
@@ -3250,8 +3253,9 @@ const library ={
           }
         },
         "3": {
-          "title": "",
-          "description/metadata of the chapter": null,
+          "titleEnglish": "Karma-yoga",
+          "titleHindi":"कर्मयोग",
+          "description": null,
           "verses": {
             "1": {
               "english": {
@@ -4490,8 +4494,9 @@ const library ={
           }
         },
         "4": {
-          "title": "",
-          "description/metadata of the chapter": null,
+          "titleEnglish": "Transcendental Knowledge",
+          "titleHindi":"दिव्य ज्ञान",
+          "description": null,
           "verses": {
             "1": {
               "english": {
@@ -5711,8 +5716,9 @@ const library ={
           }
         },
         "5": {
-          "title": "",
-          "description/metadata of the chapter": null,
+          "titleEnglish": "Karma-yoga – Action in Kṛṣṇa Consciousness",
+          "titleHindi":"कर्मयोग - कृष्णभावनाभावित कर्म",
+          "description": null,
           "verses": {
             "1": {
               "english": {
@@ -6449,8 +6455,9 @@ const library ={
           }
         },
         "6": {
-          "title": "",
-          "description/metadata of the chapter": null,
+          "titleEnglish": "Dhyāna-yoga",
+          "titleHindi":"ध्यानयोग",
+          "description": null,
           "verses": {
             "1": {
               "english": {
@@ -7604,8 +7611,9 @@ const library ={
           }
         },
         "7": {
-          "title": "",
-          "description/metadata of the chapter": null,
+          "titleEnglish": "Knowledge of the Absolute",
+          "titleHindi":"भगवद्ज्ञान",
+          "description": null,
           "verses": {
             "1": {
               "english": {
@@ -8537,8 +8545,9 @@ const library ={
           }
         },
         "8": {
-          "title": "",
-          "description/metadata of the chapter": null,
+          "titleEnglish": "Attaining the Supreme",
+          "titleHindi": "भगवत्प्राप्ति",
+          "description": null,
           "verses": {
             "1": {
               "english": {
@@ -9348,8 +9357,9 @@ const library ={
           }
         },
         "9": {
-          "title": "",
-          "description/metadata of the chapter": null,
+          "titleEnglish": "The Most Confidential Knowledge",
+          "titleHindi": "परम गुह्य ज्ञान",
+          "description": null,
           "verses": {
             "1": {
               "english": {
@@ -10376,8 +10386,9 @@ const library ={
           }
         },
         "10": {
-          "title": "",
-          "description/metadata of the chapter": null,
+          "titleEnglish": "The Opulence of the Absolute",
+          "titleHindi": "श्रीभगवान् का ऐश्वर्य",
+          "description": null,
           "verses": {
             "1": {
               "english": {
@@ -11496,8 +11507,9 @@ const library ={
           }
         },
         "11": {
-          "title": "",
-          "description/metadata of the chapter": null,
+          "titleEnglish": "The Universal Form",
+          "titleHindi": "विराट रूप",
+          "description": null,
           "verses": {
             "1": {
               "english": {
@@ -12888,8 +12900,9 @@ const library ={
           }
         },
         "12": {
-          "title": "",
-          "description/metadata of the chapter": null,
+          "titleEnglish": "Devotional Service",
+          "titleHindi": "भक्तियोग",
+          "description": null,
           "verses": {
             "1": {
               "english": {
@@ -13243,8 +13256,9 @@ const library ={
           }
         },
         "13": {
-          "title": "",
-          "description/metadata of the chapter": null,
+          "titleEnglish": "Nature, the Enjoyer and Consciousness",
+          "titleHindi": "प्रकृति, पुरुष तथा चेतना",
+          "description": null,
           "verses": {
             "3": {
               "english": {
@@ -13998,8 +14012,9 @@ const library ={
           }
         },
         "14": {
-          "title": "",
-          "description/metadata of the chapter": null,
+          "titleEnglish": "The Three Modes of Material Nature",
+          "titleHindi": "प्रकृति के तीन गुण",
+          "description": null,
           "verses": {
             "1": {
               "english": {
@@ -14659,8 +14674,9 @@ const library ={
           }
         },
         "15": {
-          "title": "",
-          "description/metadata of the chapter": null,
+          "titleEnglish": "The Yoga of the Supreme Person",
+          "titleHindi": "पुरुषोत्तम योग",
+          "description": null,
           "verses": {
             "1": {
               "english": {
@@ -15190,8 +15206,9 @@ const library ={
           }
         },
         "16": {
-          "title": "",
-          "description/metadata of the chapter": null,
+          "titleEnglish": "The Divine and Demoniac Natures",
+          "titleHindi": " दैवी और आसुरी स्वभाव",
+          "description": null,
           "verses": {
             "4": {
               "english": {
@@ -15651,8 +15668,9 @@ const library ={
           }
         },
         "17": {
-          "title": "",
-          "description/metadata of the chapter": null,
+          "titleEnglish": "The Divisions of Faith",
+          "titleHindi": "श्रद्धा के विभाग",
+          "description": null,
           "verses": {
             "1": {
               "english": {
@@ -16329,8 +16347,9 @@ const library ={
           }
         },
         "18": {
-          "title": "",
-          "description/metadata of the chapter": null,
+          "titleEnglish": "The Perfection of Renunciation",
+          "titleHindi": "उपसंहार - संन्यास की सिद्धि",
+          "description": null,
           "verses": {
             "1": {
               "english": {
