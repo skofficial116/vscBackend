@@ -1,9 +1,31 @@
 const library = {
   bg: {
-    "Setting The Scene": {},
-    Dedication: {},
-    Preface: {},
-    Introduction: {},
+    "Setting The Scene": {
+      hindi:{
+
+      },
+      english:{
+
+      }
+    },
+    Dedication: {hindi:{
+
+      },
+      english:{
+        
+      }},
+    Preface: {hindi:{
+
+    },
+    english:{
+      
+    }},
+    Introduction: {hindi:{
+
+    },
+    english:{
+      
+    }},
     1: {
       name: "Observing the Armies on the Battlefield of Kurukṣetra",
       1: {
