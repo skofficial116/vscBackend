@@ -45,15 +45,11 @@ const registerUser = asyncHandler(async (req, res) => {
   const user = await User.create({
     username: username.toLowerCase(),
     fullName,
-    // avatar: avatar.url,
-    // coverImage: cover?.url || "",
     password,
   });
 
   // Remove sensitive data before sending response
-  const createdUser = await User.findById(user._id).select(
-    "-password -refreshToken"
-  );
+  const createdUser = await User.findById(user._id)
 
   if (!createdUser) {
     throw new ApiError(500, "Something went wrong while registering the user!");
@@ -134,18 +130,10 @@ const loginUser = asyncHandler(async (req, res) => {
     throw new ApiError(404, "Invalid User Credentials");
   }
 
-  // const { accessToken, refreshToken } = await generateAccessAndRefreshToken(
-  //   user._id
-  // );
+ 
 
-  const loggedUser = await User.findById(user._id).select(
-    "-password"
-  );
+  const loggedUser = await User.findById(user._id)
 
-  // const options = {
-  //   htttpOnly: true,
-  //   secure: true,
-  // };
   
   return res
   .status(200)
